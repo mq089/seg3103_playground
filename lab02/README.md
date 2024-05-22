@@ -22,8 +22,8 @@ ID | Test Case        | Expected results | Actual Results | Verdict (Pass, Fail,
  2 | U = mquac1       |       Invalid    |      INVALID   | Fail
  2 | FN = mike1234    |                  |                |
  3 | U = mquac1       |       Invalid    |      INVALID   | Fail
- 3 | FN = Mike                 
- 3 | Email = "" (empty)|
+ 3 | FN = Mike        |                  |                |
+ 3 | Email = ""(empty)|                  |                |
    
 ![Image of test case 2](assets/test2.png) 
 ![Image of test case 3](assets/test3.png)
