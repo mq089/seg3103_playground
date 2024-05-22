@@ -20,10 +20,10 @@ ID | Test Case        | Expected results | Actual Results | Verdict (Pass, Fail,
 -- | ---------------  | ---------------- | -------------- | ----------------------------------
  1 | U = mquac1       |       Valid      |      INVALID   | Pass
  2 | U = mquac1       |       Invalid    |      INVALID   | Fail
-   | FN = mike1234    |                  |                |
+ # | FN = mike1234    |                  |                |
  3 | U = mquac1       |       Invalid    |      INVALID   | Fail
-   | FN = Mike                 
-   | Email = "" (empty)|
+ # | FN = Mike                 
+ # | Email = "" (empty)|
    
 ![Image of test case 2](assets/test2.png) 
 ![Image of test case 3](assets/test3.png)
