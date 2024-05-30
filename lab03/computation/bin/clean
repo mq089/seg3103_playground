@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Remove any class files from dist and all jacoco coverage files
+#rm -f ./dist/*.class
+#rm -f jacoco.exec
+#rm -fr ./report
+
+del /f .\dist\*.class
+del /f jacoco.exec
+rmdir /s /q .\report
