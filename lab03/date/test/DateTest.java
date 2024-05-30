@@ -149,4 +149,40 @@ class DateTest {
     );
   }
 
+  @Test
+  void nextDate_invalid_tc21() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1944, 2, 31)
+    );
+  }
+
+  @Test
+  void nextDate_invalid_tc22() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1918, 6, 31)
+    );
+  }
+
+	
+  @Test
+  void nextDate_invalid_tc23() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1943, 1, 33)
+    );
+  }
+
+
+  @Test
+  void toString_tc24() {
+    Date today = new Date(3456, 12, 31);
+	String StrToday = today.toString();
+	String Date = "3456/December/31";
+	assertEquals(Date, StrToday);
+  }
+	
+
+
 }
