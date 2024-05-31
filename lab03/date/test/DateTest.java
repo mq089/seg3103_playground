@@ -165,7 +165,6 @@ class DateTest {
     );
   }
 
-	
   @Test
   void nextDate_invalid_tc23() {
     assertThrows(
@@ -173,7 +172,6 @@ class DateTest {
       () -> new Date(1943, 1, 33)
     );
   }
-
 
   @Test
   void toString_tc24() {
@@ -183,6 +181,90 @@ class DateTest {
 	assertEquals(Date, StrToday);
   }
 	
+  @Test
+  void nextDate_tc25() {
+    Date today = new Date(2000, 2, 28);
+    Date expectedTomorrow = new Date(2000, 2, 29);
+    assertEquals(expectedTomorrow, today.nextDate());
+  }
+
+  @Test
+  void nextDate_invalid_tc26() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1975, 6, 50)
+    );
+  }
+
+  @Test
+  void nextDate_invalid_tc27() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1916, 4, 31)
+    );
+  }
+
+  @Test
+  void nextDate_invalid_tc28() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1910, 9, 31)
+    );
+  }
+
+  @Test
+  void nextDate_invalid_tc29() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1945, 11, 31)
+    );
+  }
+
+  @Test
+  void nextDate_invalid_tc30() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1975, -1, 50)
+    );
+  }
+
+  @Test
+  void nextDate_invalid_tc31() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1975, 13, 50)
+    );
+  }
+
+ 
+  @Test
+  void nextDate_invalid_tc33() {
+    Date today = new Date(2000, 1, 31);
+    Date expectedTomorrow = new Date(2000, 2, 1);
+    assertEquals(expectedTomorrow, today.nextDate());
+  }
+
+  @Test
+  void nextDate_invalid_tc34() {
+    Date today = new Date(1913, 4, 30);
+    Date expectedTomorrow = new Date(1913, 5, 1);
+    assertEquals(expectedTomorrow, today.nextDate());
+  }
+  
+
+  @Test
+  void nextDate_invalid_tc35() {
+    Date today = new Date(1913, 5, 31);
+    Date expectedTomorrow = new Date(1913, 6, 1);
+    assertEquals(expectedTomorrow, today.nextDate());
+  }
+
+  @Test
+  void nextDate_invalid_tc36() {
+    Date today = new Date(1913, 2, 28);
+    Date expectedTomorrow = new Date(1913, 3, 1);
+    assertEquals(expectedTomorrow, today.nextDate());
+  }
 
 
 }
