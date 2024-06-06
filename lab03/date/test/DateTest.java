@@ -149,4 +149,80 @@ class DateTest {
     );
   }
 
+  @Test
+  void nextDate_invalid_tc21() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1500, 2, 31)
+    );
+  }
+
+  @Test
+  void nextDate_invalid_tc22() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1500, 6, 31)
+    );
+  }
+@Test
+void nextDate_invalid_tc23() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1500, 6, -1)
+    );
+  }
+@Test
+void nextDate_invalid_tc24() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1500, 6, 51)
+    );
+  }
+@Test
+void nextDate_invalid_tc25() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1900, 2, 31)
+    );
+  }
+@Test
+void nextDate_invalid_tc26() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1943, 2, 29)
+    );
+  }
+@Test
+void nextDate_invalid_tc30() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1944, 2, 30)
+    );
+  }
+
+  @Test
+  void toString_tc27() {
+    Date today = new Date(3456, 12, 31);
+    String StrToday = today.toString();
+    assertEquals(StrToday, "3456/December/31");
+  }
+
+  @Test
+  void equals_tc28() {
+    Date today = new Date(3456, 12, 31);
+    int date = 5;
+    boolean f = today.equals(date);
+    assertEquals(false, f);
+  }
+
+ @Test
+  void equals_tc29() {
+    Date today = new Date(3456, 12, 31);
+    boolean f = today.equals(today);
+    assertEquals(false, f);
+  }
+
+
+
+
 }

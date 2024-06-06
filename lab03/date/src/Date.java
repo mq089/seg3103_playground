@@ -109,7 +109,7 @@ public class Date {
 		if (day == 31 || (day == 30 && isThirtyDayMonth()) ||
 				(this.month == 2 && ((day == 29 && leap) || (day == 28 && !leap))))
 			return true;
-		else return false;
+		return false;
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class Date {
 	private boolean isThirtyDayMonth() {
 		if (this.month == 4 || this.month == 6 || this.month == 9 || this.month == 11)
 			return true;
-		else return false;
+		return false;
 	}
 
 	/**
@@ -137,7 +137,11 @@ public class Date {
 	}
 
 	public boolean equals(Object obj) {
-		if (! (obj instanceof Date)) return false;
+		if (! (obj instanceof Date)){
+			return false;
+		} 
+			
+		
 		Date od = (Date)obj;
 		return year == od.getYear() && month == od.getMonth()  && day == od.getDay();
 	}
