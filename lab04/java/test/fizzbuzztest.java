@@ -38,7 +38,7 @@ class fizzbuzzTest{
     void passFizzBuzz_tc05() {
         String FizzBuzz = fizzbuzz.fizzBuzz(15);
         String result = "FizzBuzz";
-        assertEquals(result, Buzz);
+        assertEquals(result, FizzBuzz);
     }
 
 }
