@@ -19,6 +19,12 @@ class fizzbuzzTest{
     }
 
 
+    @Test
+    void passFizz_tc03() {
+        String fizz = fizzbuzz.fizzBuzz(3);
+        String result = "Fizz";
+        assertEquals(result, fizz);
+    }
 
 
 
