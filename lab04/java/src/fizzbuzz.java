@@ -19,14 +19,16 @@ public class fizzbuzz {
     }
 
     public static String fizzBuzz(int n) {
+        String result = "";
         if (n % 3 == 0 && n % 5 == 0) {
-            return "FizzBuzz";
+            result = "FizzBuzz";
         } else if (n % 3 == 0) {
-            return "Fizz";
+            result = "Fizz";
         } else if (n % 5 == 0) {
-            return "Buzz";
+            result = "Buzz";
         } else {
-            return Integer.toString(n);
+            result = Integer.toString(n);
         }
+        return result;
     }
 }
