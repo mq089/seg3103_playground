@@ -11,7 +11,12 @@ class fizzbuzzTest{
         assertEquals(result, fizz);
     }
 
-    
+    @Test
+    void failFizz_tc02() {
+        String fizz = fizzbuzz.fizzBuzz(3);
+        String result = "Buzz";
+        assertEquals(result, fizz);
+    }
 
 
 
