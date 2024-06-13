@@ -138,7 +138,13 @@ public class Date {
 	public boolean equals(Object obj) {
 		if (! (obj instanceof Date)){
 			return false;
+<<<<<<< HEAD
+		} 
+			
+		
+=======
 		}
+>>>>>>> 7e6c04428960dc436ac901d9a0f1b063579ec382
 		Date od = (Date)obj;
 		return year == od.getYear() && month == od.getMonth()  && day == od.getDay();
 	}
