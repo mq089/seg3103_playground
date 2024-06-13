@@ -1,0 +1,12 @@
+REM Remove any class files from dist
+del /F /Q .\dist\*.class
+
+REM Compile the application
+javac -encoding UTF-8 -sourcepath src -d dist src\*.java
+
+REM Compile the tests
+javac -encoding UTF-8 --source-path test -d dist -cp dist;lib\easymock-4.3.jar;lib\junit-platform-console-standalone-1.7.1.jar test\*.java
+
+
+REM Run the tests
+java -jar lib\junit-platform-console-standalone-1.7.1.jar -cp dist;lib\easymock-4.3.jar;lib\objenesis-3.2.jar --scan-class-path
