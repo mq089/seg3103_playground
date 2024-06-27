@@ -31,10 +31,10 @@ class ExampleSeleniumTest {
   @BeforeEach
   void setUp() {
     // Pick your browser
-    // driver = new FirefoxDriver();
+    driver = new FirefoxDriver();
     // driver = new SafariDriver();
     WebDriverManager.chromedriver().setup();
-    driver = new ChromeDriver();
+    //driver = new ChromeDriver();
 
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     driver.get("http://localhost:8080/");
@@ -60,6 +60,19 @@ class ExampleSeleniumTest {
     String actual = element.getText();
     assertEquals(expected, actual);
   }
+
+
+  @Test
+  void test3() {
+    WebElement element = driver.findElement(By.id("title"));
+    String expected = "YAMAZONE BookStore";
+    String actual = element.getText();
+    assertEquals(expected, actual);
+  }
+
+
+
+
 
   @Test
   public void test2() {
