@@ -73,11 +73,11 @@ public CalCFrame(String title) {
     
     if ( i <= 2 )
         getContentPane().add( buttons[i] );
-    else if ( i >= 3 && i <= 7)
+    else if (i <= 7)
         getContentPane().add( buttons[i] );
-    else if ( i >=8 && i <= 12 )
+    else if (i <= 12 )
         getContentPane().add( buttons[i] );
-    else if ( i >= 13 && i <= 17 )
+    else if (i <= 17 )
         getContentPane().add( buttons[i] );
     else
         getContentPane().add( buttons[i] );
@@ -269,7 +269,7 @@ public void processNumbers() {
       equals = false;   // equals is set to false to allow additional input    
   } // end if    
     else 
-      num1 = Double.valueOf( input ).doubleValue();  // converts a string number to double
+      num1 = Double.parseDouble( input );  // converts a string number to double
      
       oldoper =  oper;                  // store current operator to oldoper
       
@@ -301,7 +301,7 @@ public void processNumbers() {
   
     // if more than two numbers are being inputted to calculate, this "if" block
     // is accessed
-    else if (morenums) { 
+    else { 
       
       if ( equals ) {
        
@@ -357,7 +357,7 @@ public void showAnswer( String s )
 {
     double answer;
     
-    answer = Double.valueOf(s).doubleValue();
+    answer = Double.parseDouble(s);
     if ( decnumber )    
     result.setText( Double.toString(answer) );
     else
@@ -370,7 +370,7 @@ public void showAnswer( String s )
 //value.  If doubleclick is true, the program ignores the input
 //==============================================================================
 public boolean clickCheck( String s ) {
-  if ( s == "" )
+  if ( s.equals(""))
     doubleclick = true;
   else 
     doubleclick = false;
