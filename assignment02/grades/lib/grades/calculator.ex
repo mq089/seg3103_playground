@@ -23,6 +23,17 @@ defmodule Grades.Calculator do
       0.2 * avg_labs + 0.3 * avg_homework + 0.2 * midterm + 0.3 * final
   end
 
+  #Question 2.4: refactored exam average calcualtion into calculate_exam method
+  def calculate_exam(midterm, final) do
+      (midterm + final) / 2
+  end
+
+  #Question 2.4: refactored num_labs calculate_exam into count_labs method
+  def count_labs(labs) do
+      labs
+      |> Enum.reject(fn mark -> mark < 0.25 end)
+      |> Enum.count()
+  end
 
 
 
@@ -44,13 +55,12 @@ defmodule Grades.Calculator do
 
     #Question 2.1: refactored code to use helper method avg
     avg_labs = avg(labs)
+    #Question 2.4: refactored code to use helper method calculate_exam
+    avg_exams = calculate_exam(midterm, final)
 
-    avg_exams = (midterm + final) / 2
+    ##Question 2.4: refactored lab counts into count_labs
+    num_labs = count_labs(labs)
 
-    num_labs =
-      labs
-      |> Enum.reject(fn mark -> mark < 0.25 end)
-      |> Enum.count()
     #Question 2.2: refactored conditional statement to use helper method failed_to_participate
     if failed_to_participate?(avg_homework, avg_exams, num_labs) do
       "EIN"
@@ -80,12 +90,12 @@ defmodule Grades.Calculator do
     #Question 2.1: refactored code to use helper method avg
     avg_labs = avg(labs)
 
-    avg_exams = (midterm + final) / 2
-
-    num_labs =
-      labs
-      |> Enum.reject(fn mark -> mark < 0.25 end)
-      |> Enum.count()
+    #Question 2.4: refactored code to use helper method calculate_exam
+    avg_exams = calculate_exam(midterm, final)
+    
+    #Question 2.4: refactored lab counts into count_labs
+    num_labs = num_labs = count_labs(labs)
+    
     #Question 2.2: refactored conditional statement to use helper method failed_to_participate
     if failed_to_participate?(avg_homework, avg_exams, num_labs) do
       0
