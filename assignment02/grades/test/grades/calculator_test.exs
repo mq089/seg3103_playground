@@ -245,7 +245,7 @@ describe "numeric_grade/6" do
   end
 
   describe "numeric_grade/7" do
-    test "TC9" do
+    test "TC19" do
       assert 5 ==
                Calculator.numeric_grade(%{
                  homework: [1,0],
