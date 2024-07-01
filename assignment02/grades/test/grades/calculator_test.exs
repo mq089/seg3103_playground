@@ -173,7 +173,7 @@ describe "letter_grade/12" do
 
 
 describe "numeric_grade/1" do
-    test "TC13" do
+    test "TC15" do
       assert 0 ==
                Calculator.numeric_grade(%{
                  homework: [],
@@ -185,7 +185,7 @@ describe "numeric_grade/1" do
   end
 
   describe "numeric_grade/2" do
-    test "TC14" do
+    test "TC16" do
       assert 10 ==
                Calculator.numeric_grade(%{
                  homework: [1],
@@ -197,7 +197,7 @@ describe "numeric_grade/1" do
   end
 
   describe "numeric_grade/3" do
-    test "TC15" do
+    test "TC17" do
       assert 9 ==
                Calculator.numeric_grade(%{
                  homework: [1],
@@ -209,7 +209,7 @@ describe "numeric_grade/1" do
   end
 
   describe "numeric_grade/4" do
-    test "TC16" do
+    test "TC18" do
       assert 8 ==
                Calculator.numeric_grade(%{
                  homework: [1],
@@ -221,7 +221,7 @@ describe "numeric_grade/1" do
   end
 
 describe "numeric_grade/5" do
-    test "TC17" do
+    test "TC19" do
       assert 7 ==
                Calculator.numeric_grade(%{
                  homework: [1,0],
@@ -233,7 +233,7 @@ describe "numeric_grade/5" do
   end
 
 describe "numeric_grade/6" do
-    test "TC18" do
+    test "TC20" do
       assert 6 ==
                Calculator.numeric_grade(%{
                  homework: [1,0],
@@ -245,7 +245,7 @@ describe "numeric_grade/6" do
   end
 
   describe "numeric_grade/7" do
-    test "TC19" do
+    test "TC21" do
       assert 5 ==
                Calculator.numeric_grade(%{
                  homework: [1,0],
@@ -257,7 +257,7 @@ describe "numeric_grade/6" do
   end
 
  describe "numeric_grade/8" do
-    test "TC20" do
+    test "TC22" do
       assert 4 ==
                Calculator.numeric_grade(%{
                  homework: [1,0],
@@ -269,7 +269,7 @@ describe "numeric_grade/6" do
   end
 
  describe "numeric_grade/9" do
-    test "TC21" do
+    test "TC23" do
       assert 3 ==
                Calculator.numeric_grade(%{
                  homework: [1,0],
@@ -281,7 +281,7 @@ describe "numeric_grade/6" do
   end
 
  describe "numeric_grade/10" do
-    test "TC22" do
+    test "TC24" do
       assert 2 ==
                Calculator.numeric_grade(%{
                  homework: [1,0],
@@ -293,7 +293,7 @@ describe "numeric_grade/6" do
   end
 
 describe "numeric_grade/11" do
-    test "TC23" do
+    test "TC25" do
       assert 1 ==
                Calculator.numeric_grade(%{
                  homework: [1,0],
@@ -305,7 +305,7 @@ describe "numeric_grade/11" do
   end
 
 describe "numeric_grade/12" do
-    test "TC24" do
+    test "TC26" do
       assert 0 ==
                Calculator.numeric_grade(%{
                  homework: [0.4,0.4],
