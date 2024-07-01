@@ -45,6 +45,10 @@ Test Cases for numeric_grade
 | TC25 | homework: [1, 0], labs:[1, 1, 1, 0, 0], midterm: 1, final: 0 | 1 | Line 68, Line 75, Line 88, Line 101 | Line 69, Line 76, Line 101 |
 | TC26 | homework: [0.4, 0.4], labs:[.2, .2, .2, .2, .2], midterm: 0.8, final: 0 | 0 | Line 68, Line 75, Line 88, Line 102 | Line 69, Line 76, Line 102 |
 
+Question 1.3
+See assignment02/grades/test/grades/calculator_test
+To run the code you must be in assignment02/grades and run: mix test --cover
+
 Question 1.4
 See assignment02/assets for the coverage.
 ![Statement Coverage](assets/coverage.png) 
