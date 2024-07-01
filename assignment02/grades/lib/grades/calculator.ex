@@ -9,6 +9,19 @@ defmodule Grades.Calculator do
       end
   end
 
+  #Question 2.2: refactored participation condition into failed_to_participate? helper method
+  def failed_to_participate?(avg_homework, avg_exams, num_labs) do 
+      if avg_homework < 0.4 || avg_exams < 0.4 || num_labs < 3 do
+        :true
+      else
+        :false
+      end
+  end
+
+
+
+
+
 
   def percentage_grade(%{homework: homework, labs: labs, midterm: midterm, final: final}) do
     
@@ -35,8 +48,8 @@ defmodule Grades.Calculator do
       labs
       |> Enum.reject(fn mark -> mark < 0.25 end)
       |> Enum.count()
-
-    if avg_homework < 0.4 || avg_exams < 0.4 || num_labs < 3 do
+    #Question 2.2: refactored conditional statement to use helper method failed_to_participate
+    if failed_to_participate?(avg_homework, avg_exams, num_labs) do
       "EIN"
     else
       mark = 0.2 * avg_labs + 0.3 * avg_homework + 0.2 * midterm + 0.3 * final
@@ -70,8 +83,8 @@ defmodule Grades.Calculator do
       labs
       |> Enum.reject(fn mark -> mark < 0.25 end)
       |> Enum.count()
-
-    if avg_homework < 0.4 || avg_exams < 0.4 || num_labs < 3 do
+    #Question 2.2: refactored conditional statement to use helper method failed_to_participate
+    if failed_to_participate?(avg_homework, avg_exams, num_labs) do
       0
     else
       mark = 0.2 * avg_labs + 0.3 * avg_homework + 0.2 * midterm + 0.3 * final
