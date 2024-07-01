@@ -58,3 +58,7 @@ To address these limitations, we can possibly use other tools to check other kin
 Question 2.1-2.4:
 
 See updated code in assignment02/grades/lib/grades/calculator ex.
+
+You can also find the code in assignment02/Question 1&2 code.
+
+To run the code you must be in assignment02/grades and run: mix test --cover
